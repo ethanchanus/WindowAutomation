@@ -11,8 +11,10 @@ WindowAutomation is a Loupedeck plugin for automating interactions with native W
 This lets you chain multiple commands into complex, repeatable mouse-and-keyboard sequences for controls like Tabs, TextBoxes, ListBoxes, ComboBoxes, and Toolbar menus in any Windows application. It also includes a dial adjustment to resize the active window directly from the Loupedeck device.
 
 ## Screenshot
+<img width="824" height="1050" alt="image" src="https://github.com/user-attachments/assets/f3f4f7af-550d-4eb9-9ffc-74823a1e0009" />
+<img width="759" height="734" alt="image" src="https://github.com/user-attachments/assets/247e9f70-c229-47cd-9d21-2aba0e74d62a" />
 
-_Add a screenshot of the plugin in action here._
+
 
 ## Building the Plugin
 
@@ -40,7 +42,10 @@ Installation extracts the `lplug4` package to `%LOCALAPPDATA%\Loupedeck\Plugins\
 To find a Windows control's exact attributes (name, class name, UI Automation ID, parent/sibling class name, etc), inspect it with one of these tools:
 
 - **Spy++** — included with Visual Studio, under `Common7\Tools`.
+<img width="752" height="414" alt="image" src="https://github.com/user-attachments/assets/cfa40dab-c49c-4b64-a828-2b4271b4a2d0" />
+ 
 - **Inspect.exe** — a UI Automation diagnostic tool included with the Windows SDK.
+<img width="642" height="390" alt="image" src="https://github.com/user-attachments/assets/6c506b13-2cc5-49fe-b78d-b5b62a4b607f" />
 
 ## License
 
