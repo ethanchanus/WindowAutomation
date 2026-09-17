@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -71,7 +71,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\..\out\Directory.Build.targets" Condition="Exists('..\..\..\out\Directory.Build.targets')" />
+  <Import Project="..\..\..\sln\Directory.Build.targets" Condition="Exists('..\..\..\sln\Directory.Build.targets')" />
   <Target Name="PreparePluginApiInOut" BeforeTargets="ResolveReferences">
     <Copy
       SourceFiles="..\..\..\LoupedeckPluginSdkToolkit_5.9.0.19175_win\PluginApi.dll"

@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <LoupedeckPluginToolPath>$(MSBuildThisFileDirectory)..\LoupedeckPluginSdkToolkit_5.9.0.19175_win\LoupedeckPluginTool.exe</LoupedeckPluginToolPath>
+    <LoupedeckPackInputPath>$(MSBuildThisFileDirectory)..\out\bin\Release\</LoupedeckPackInputPath>
+    <LoupedeckPackOutputPath>$(MSBuildThisFileDirectory)..\out\WindowAutomation.lplug4</LoupedeckPackOutputPath>
+  </PropertyGroup>
+
+  <Target Name="Deploy" DependsOnTargets="Build">
+    <Message Text="Deploy target is a no-op for project '$(MSBuildProjectName)'." Importance="Low" Condition="'$(MSBuildProjectName)' != 'WindowAutomationPlugin'" />
+    <Error Text="LoupedeckPluginTool.exe not found at '$(LoupedeckPluginToolPath)'" Condition="'$(MSBuildProjectName)' == 'WindowAutomationPlugin' and !Exists('$(LoupedeckPluginToolPath)')" />
+    <Exec Condition="'$(MSBuildProjectName)' == 'WindowAutomationPlugin'" Command="cmd /c &quot;&quot;$(LoupedeckPluginToolPath)&quot; pack -input=$(LoupedeckPackInputPath) -output=$(LoupedeckPackOutputPath)&quot;" />
+  </Target>
+</Project>
